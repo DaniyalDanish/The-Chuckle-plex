@@ -1,0 +1,46 @@
+<app-header></app-header>
+
+<div *ngIf="!!movieDetails">
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title class="movie-title">{{ movieDetails.Title }} ({{ movieDetails.Year }})</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <div class="movie-details">
+
+        <div [ngSwitch]="movieDetails.Poster">
+          <img *ngSwitchCase="'N/A'" class="poster" src="../../assets/images/unavaiable.jpg"
+               alt="{{ movieDetails.Title }}">
+          <img *ngSwitchDefault class="poster" [src]="movieDetails.Poster" alt="{{ movieDetails.Title }}">
+        </div>
+
+        <div class="movie-info">
+          <p><strong>Rated:</strong> {{ movieDetails.Rated }}</p>
+          <p><strong>Released:</strong> {{ movieDetails.Released }}</p>
+          <p><strong>Runtime:</strong> {{ movieDetails.Runtime }}</p>
+          <p><strong>Genre:</strong> {{ movieDetails.Genre }}</p>
+          <p><strong>Director:</strong> {{ movieDetails.Director }}</p>
+          <p><strong>Writer:</strong> {{ movieDetails.Writer }}</p>
+          <p><strong>Actors:</strong> {{ movieDetails.Actors }}</p>
+          <p class="wrap-text"><strong>Plot:</strong> {{ movieDetails.Plot }}</p>
+          <p><strong>Language:</strong> {{ movieDetails.Language }}</p>
+          <p><strong>Country:</strong> {{ movieDetails.Country }}</p>
+          <p><strong>Awards:</strong> {{ movieDetails.Awards }}</p>
+          <p><strong>Ratings:</strong></p>
+          <ul>
+            <li class="li-font" *ngFor="let rating of movieDetails.Ratings">{{ rating.Source }}: {{ rating.Value }}</li>
+          </ul>
+          <p><strong>Metascore:</strong> {{ movieDetails.Metascore }}</p>
+          <p><strong>IMDb Rating:</strong> {{ movieDetails.imdbRating }}</p>
+          <p><strong>IMDb Votes:</strong> {{ movieDetails.imdbVotes}}</p>
+          <p><strong>IMDb DVD:</strong> {{ movieDetails.DVD}}</p>
+          <p><strong>IMDb BoxOffice:</strong> {{ movieDetails.BoxOffice}}</p>
+          <p><strong>IMDb Production:</strong> {{ movieDetails.Production}}</p>
+          <p><strong>IMDb Website:</strong> {{ movieDetails.Website}}</p>
+          <p><strong>IMDb Response:</strong> {{ movieDetails.Response}}</p>
+        </div>
+      </div>
+    </mat-card-content>
+  </mat-card>
+</div>
+

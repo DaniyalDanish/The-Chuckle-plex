@@ -1,0 +1,17 @@
+<div *ngIf="movies">
+  <mat-grid-list cols="3">
+    <mat-grid-tile *ngFor="let movie of movies">
+      <mat-card class="movie-card">
+        <div [ngSwitch]="movie.Poster" routerLink="{{'movies/' + movie.imdbID}}">
+          <img *ngSwitchCase="'N/A'" class="poster" src="../../../assets/images/unavaiable.jpg" alt="{{ movie.Title }}">
+          <img *ngSwitchDefault class="poster" [src]="movie.Poster" alt="{{ movie.Title }}">
+        </div>
+        <mat-card-content>
+          <mat-card-title class="movie-info">
+            {{ movie.Title }} ({{ movie.Year }})
+          </mat-card-title>
+        </mat-card-content>
+      </mat-card>
+    </mat-grid-tile>
+  </mat-grid-list>
+</div>

@@ -1,0 +1,38 @@
+@media only screen and (max-width: 600px) {
+  mat-grid-list {
+    width: 100%;
+  }
+  mat-grid-tile {
+    width: 100%;
+  }
+}
+
+.movie-card {
+  position: relative;
+  cursor: pointer;
+  margin: 300px;
+}
+
+.movie-card:hover {
+  transform: scale(1.2);
+  z-index: 1;
+}
+
+.poster {
+  width : 325px;
+  height : 500px;
+}
+
+.mat-grid-list {
+  margin: 5%;
+  display: contents;
+}
+
+.movie-info {
+  color: lightgray;
+  font-weight: bolder;
+  font-size: x-large;
+  word-wrap: break-word;
+  max-width: 300px;
+  text-align: center;
+}

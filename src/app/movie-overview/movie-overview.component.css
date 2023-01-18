@@ -1,0 +1,41 @@
+.movie-details-card {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.movie-details {
+  display: flex;
+}
+
+.movie-details img {
+  width: 375px;
+  height: 650px;
+  margin-right: 20px;
+}
+
+.movie-info {
+  background-image: url("../../assets/images/details-background.jpeg");
+}
+
+.movie-info p{
+  margin: 10px 0;
+  color: lightgray;
+}
+
+.movie-title {
+  color: lightgray;
+  font-size: 30px;
+  font-weight: bolder;
+  margin-left: 30px;
+  margin-top: 50px;
+  margin-bottom: 20px;
+}
+
+.wrap-text {
+  word-wrap: break-word;
+  max-width: 1200px;
+}
+
+.li-font {
+  color: white;
+}

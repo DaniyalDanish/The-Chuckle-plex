@@ -1,0 +1,4 @@
+<form [formGroup]="searchMovieForm">
+  <input type="text" formControlName="searchQuery" placeholder="Search for a movie...">
+  <button type="submit" (click) = "searchMovie()" >Search</button>
+</form>
